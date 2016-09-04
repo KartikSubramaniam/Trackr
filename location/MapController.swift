@@ -27,6 +27,8 @@ class MapController: UIViewController,CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        //adding location
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
