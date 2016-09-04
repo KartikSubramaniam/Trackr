@@ -70,7 +70,10 @@ class MapController: UIViewController,CLLocationManagerDelegate{
             let last = CLLocation(latitude: lastLocation!.coordinate.latitude, longitude: lastLocation!.coordinate.longitude)
             let current = CLLocation(latitude: locations!.coordinate.latitude, longitude: locations!.coordinate.longitude)
              travelledDistance += current.distanceFromLocation(last)
-            totalDistanceTravelled.text = String(travelledDistance)
+            let x = (travelledDistance)/1000
+            let showDestination : Double = Double(round(1000*x)/1000)
+            
+            totalDistanceTravelled.text = String(showDestination) + " KM "
            
         }
         
@@ -89,8 +92,8 @@ class MapController: UIViewController,CLLocationManagerDelegate{
         
             let search  = CLLocation(latitude: searchLocation!.coordinate.latitude, longitude:searchLocation!.coordinate.longitude)
             let destinationDistance :Double = search.distanceFromLocation(first)
-            if(destinationDistance <= 100){
-                let alert = UIAlertController(title: "Location", message: "You are 100 m near yor location ", preferredStyle: UIAlertControllerStyle.Alert)
+            if(destinationDistance <= 500){
+                let alert = UIAlertController(title: "Location", message: "You are 100 m near your location ", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
                 self.presentViewController(alert, animated: true, completion: nil)
                 self.locationManager.stopUpdatingLocation()
@@ -114,6 +117,7 @@ class MapController: UIViewController,CLLocationManagerDelegate{
 extension MapController: HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark){
         // cache the pin
+        travelledDistance = 0.0
         searchLocation = placemark
         selectedPin = placemark
         // clear existing pins
@@ -129,6 +133,7 @@ extension MapController: HandleMapSearch {
         let span = MKCoordinateSpanMake(0.05, 0.05)
         let region = MKCoordinateRegionMake(placemark.coordinate, span)
         mapView.setRegion(region, animated: true)
+        self.locationManager.startUpdatingLocation()
     }
 }
 

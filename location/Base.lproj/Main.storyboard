@@ -23,8 +23,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="op8-HU-Xwe"/>
                                 </connections>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Travelled :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kil-zv-HPE">
+                                <rect key="frame" x="7" y="574" width="134" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="rNS-Hq-65D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-zh-q74">
-                                <rect key="frame" x="236" y="573" width="135" height="18"/>
+                                <rect key="frame" x="142" y="574" width="135" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="OgH-eL-uwB"/>
                                 </constraints>
@@ -39,24 +48,15 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance Travelled :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kil-zv-HPE">
-                                <rect key="frame" x="7" y="574" width="158" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="rNS-Hq-65D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TXd-xj-NEd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Ss-Ih-TAt"/>
                             <constraint firstItem="TXd-xj-NEd" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="-38" id="6lL-rO-0CW"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cb1-zh-q74" secondAttribute="bottom" constant="9" id="KEz-Yj-4Mr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cb1-zh-q74" secondAttribute="bottom" constant="8" id="KEz-Yj-4Mr"/>
                             <constraint firstItem="TXd-xj-NEd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Kl4-k2-csX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kil-zv-HPE" secondAttribute="bottom" constant="8" id="XCP-QV-ZcN"/>
-                            <constraint firstItem="cb1-zh-q74" firstAttribute="leading" secondItem="Kil-zv-HPE" secondAttribute="trailing" constant="71" id="fy2-8e-tpH"/>
+                            <constraint firstItem="cb1-zh-q74" firstAttribute="leading" secondItem="Kil-zv-HPE" secondAttribute="trailing" constant="1" id="fy2-8e-tpH"/>
                             <constraint firstAttribute="trailing" secondItem="TXd-xj-NEd" secondAttribute="trailing" id="ykv-0w-iDk"/>
                             <constraint firstItem="Kil-zv-HPE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-13" id="zCf-dD-6rO"/>
                         </constraints>
